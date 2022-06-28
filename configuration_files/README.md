@@ -1,5 +1,5 @@
 # このフォルダの用途
-created by ©︎ATR  
+created by ©︎niscode
 
 ここではTeleco-Vのナビゲーション実行時の最大速度などのパラメータが変更可能です。  
 

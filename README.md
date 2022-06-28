@@ -1,5 +1,5 @@
 # このフォルダの用途
-created by ©︎nishimura
+created by ©︎niscode
 
 ここではTeleco-Vにて、
 - gmappingを用いたSLAM

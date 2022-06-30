@@ -1,10 +1,6 @@
+<?xml version="1.0"?>
 <!--
 SLAM（gmapping）サンプルのlaunch
-
-実行にはLRFが必要です。
-地図を生成していくためにはメガローバーを手動で移動させる必要があります。
-ゲームパッド操作サンプルまたはマウス（タッチパッド）操作サンプルを使用してください。
-
 起動コマンド： roslaunch teleco-v_ros gmapping.launch
 
 created by ©︎niscode
@@ -26,7 +22,7 @@ created by ©︎niscode
   <node pkg="teleco-v_ros" type="pub_odom" name="pub_odom" />
 
 
-  <!-- RPLidar a3 の場合 20220517追記 -->
+  <!-- RPLidar【a3】の場合 20220517追記 -->
   <group if="$(eval lrf=='a3')">
     <!-- メガローバーの旋回中心からLRFまでの座標変換の設定 -->
     <group if="$(eval rover_type=='mega3')">
@@ -52,7 +48,7 @@ created by ©︎niscode
   </group>
 
 
-  <!-- RPLidar s2 の場合 20220628追記 -->
+  <!-- RPLidar【s2】の場合 20220628追記 -->
   <group if="$(eval lrf=='s2')">
     <!-- メガローバーの旋回中心からLRFまでの座標変換の設定 -->
     <group if="$(eval rover_type=='mega3')">

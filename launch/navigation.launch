@@ -26,7 +26,6 @@
       <!-- メガローバーVer.3.0の場合 -->
       <!-- argsの項でLRFの位置を調整できます。 args="x y z y p r" 20220518追記 -->
       <node pkg="tf" type="static_transform_publisher" name="stp_laser" args="0.208 0 0.090 -1.57 0 0 base_link lrf_link 1" />
-
     </group>
     <group if="$(eval rover_type=='outdoor')">
       <!-- メガローバーVer.3.0屋外対応版の場合 -->
@@ -54,7 +53,6 @@
     <!-- メガローバーVer.3.0の場合 -->
       <!-- argsの項でLRFの位置を調整できます。 args="x y z y p r" 20220518追記 -->
       <node pkg="tf" type="static_transform_publisher" name="stp_laser" args="0.208 0 0.090 -1.57 0 0 base_link lrf_link 1" />
-
     </group>
     <group if="$(eval rover_type=='outdoor')">
       <!-- メガローバーVer.3.0屋外対応版の場合 -->
@@ -68,15 +66,15 @@
       <param name="frame_id"            type="string" value="lrf_link"/>
       <param name="inverted"            type="bool"   value="false"/>
       <param name="angle_compensate"    type="bool"   value="true"/>
-      <param name="scan_mode"           type="string" value="Standard"/>
-      <param name="max_distance"        type="double"  value="10"/>
+      <param name="scan_mode"           type="string" value="Standard"/><!-- S2 -->
+      <param name="max_distance"        type="double"  value="15"/>
     </node>
   </group>
 
 
   <!-- mapサーバー -->
   <arg name="map_file" default="/home/teleco04/map/gmap_3f.yaml"/>
-  <!-- <arg name="map_file" default="$(find teleco-v_ros)/map/gmap.yaml"/> -->　<!--マップファイルのパスの指定 -->
+  <!-- <arg name="map_file" default="$(find teleco-v_ros)/map/gmap.yaml"/> --> <!--マップファイルのパスの指定 -->
   <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
  
   <!-- 

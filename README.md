@@ -10,12 +10,16 @@ created by ©︎niscode
 - `sudo apt install ros-melodic-slam-gmapping`
 - `sudo apt install ros-melodic-navigation`
 
+- `git clone https://github.com/Slamtec/rplidar_ros.git`
+＊複数のLiDARを使用する場合
+- `git clone https://github.com/iralabdisco/ira_laser_tools.git`
+
 
 まずは `roscore` を実行した状態で、以下に進む。
 
 <br>
 
-> ### SLAMを実行する場合
+> ### SLAMを実行する
 <br>
 
 `roslaunch teleco-v_ros gmapping.launch`
@@ -31,7 +35,7 @@ X-boxコントローラなどでTeleco-Vを操作し地図を作成していく�
 
 <br>
 
-> ### ナビゲーションを実行する場合
+> ### ナビゲーションを実行する
 <br>
 
 以下を起動することで、rviz上にSLAMで作成した地図とTelecoの自己位置のパーティクルが表示される。  

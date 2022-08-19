@@ -15,6 +15,16 @@ created by ©︎niscode
 ＊複数のLiDARを使用する場合
 - `git clone https://github.com/iralabdisco/ira_laser_tools.git`
 
+＊＊このコードではデバイスファイル名を以下のように固定して使用します
+- RPLiDAR
+   -> Front_LRF
+   -> Rear_LRF
+
+- FT231X（駆動系）
+   -> ROVER_BOARD
+   
+- 
+
 <br><br>
 
 まずは `roscore` を実行した状態で、以下に進む。

@@ -1,4 +1,4 @@
-# このフォルダの用途
+# このパッケージの用途
 created by ©︎niscode
 
 ここではTeleco-Vにて、

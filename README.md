@@ -15,8 +15,7 @@ created by ©︎niscode
 ＊複数のLiDARを使用する場合
 - `git clone https://github.com/iralabdisco/ira_laser_tools.git`
 
-＊＊このコードではデバイスファイル名を以下のように固定して使用します<br>
-登録方法は[こちら](https://scrapbox.io/nishi-pro/%E3%80%90ROS%E3%80%91USB%E6%8E%A5%E7%B6%9A%E3%81%95%E3%82%8C%E3%81%9F%E3%83%87%E3%83%90%E3%82%A4%E3%82%B9%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E5%90%8D%E3%81%AE%E5%9B%BA%E5%AE%9A)を参照
+＊＊このコードではデバイスファイル名を以下のように固定して使用します　（登録方法は[こちら](https://scrapbox.io/nishi-pro/%E3%80%90ROS%E3%80%91USB%E6%8E%A5%E7%B6%9A%E3%81%95%E3%82%8C%E3%81%9F%E3%83%87%E3%83%90%E3%82%A4%E3%82%B9%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E5%90%8D%E3%81%AE%E5%9B%BA%E5%AE%9A)を参照）
 - RPLiDARM<br>
    -> Front_LRF<br>
    -> Rear_LRF<br>

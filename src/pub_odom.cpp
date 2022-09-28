@@ -2,6 +2,9 @@
 #include <tf/transform_broadcaster.h>
 #include <nav_msgs/Odometry.h>
 #include <geometry_msgs/Twist.h>
+// 2022/08/30追記　-nis
+#include <tf2/convert.h>
+#include <tf2_geometry_msgs/tf2_geometry_msgs.h>
 
 double vx =  0.0;
 double vy =  0.0;
@@ -18,12 +21,16 @@ void roverOdomCallback(const geometry_msgs::Twist::ConstPtr& rover_odom){
 }
 
 int main(int argc, char** argv){
-  ros::init(argc, argv, "odometry_publisher");
+  ros::init(argc, argv, "odometry_publisher");  // ... ROS Master(roscore)にノード名「odometry_publisher」として登録
 
-  ros::NodeHandle n;
-  ros::Publisher  odom_pub = n.advertise<nav_msgs::Odometry>("odom", 50);
-  ros::Subscriber odom_sub = n.subscribe("/rover_odo", 100, roverOdomCallback);
+  ros::NodeHandle n;  // ... Publisher/Subscriber を作るための「ros::NodeHandle」のインスタンスを用意する（Pythonではrospy)
+
+  ros::Publisher  odom_pub = n.advertise<nav_msgs::Odometry>("odom", 50);  // ... Publiserを作成 テンプレート引数「nav_msgs::Odometry」を与える
+
+  ros::Subscriber odom_sub = n.subscribe("/rover_odo", 100, roverOdomCallback);  // ... Subscriverを作成 「/rover_odo」という名前でキューのサイズが「100」、メッセージを受信した時の処理が「roverOdomCallBack」という関数になるように登録
+
   tf::TransformBroadcaster odom_broadcaster;
+  // tf2_ros::TransformBroadcaster odom_broadcaster;
 
   //get params
   ros::param::param<double>("odom_kv", odom_kv, 1.0);

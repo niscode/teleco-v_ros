@@ -1,0 +1,9 @@
+<launch>
+    <node pkg="teleco-v_ros" name="webserver" type="webserver.py" args="8000" />
+    <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch">
+        <arg name="port" value="9000"/>
+    </include>
+
+    <!-- 同時に起動したいローンチファイル -->
+    <!-- <include file="$(find teleco-v_ros)/launch/gmapping.launch" /> -->
+</launch>

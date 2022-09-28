@@ -73,7 +73,7 @@
 
 
   <!-- mapサーバー -->
-  <arg name="map_file" default="/home/teleco04/map/gmap_3f.yaml"/>
+  <arg name="map_file" default="/home/teleco04/map/gmap_1f.yaml"/>
   <!-- <arg name="map_file" default="$(find teleco-v_ros)/map/gmap.yaml"/> --> <!--マップファイルのパスの指定 -->
   <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
  

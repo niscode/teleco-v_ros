@@ -15,9 +15,9 @@ local_costmap:
 
   # 更新頻度の設定
 #  update_frequency: 3.0
-  update_frequency: 1.5
+  update_frequency: 4.0
 #  publish_frequency: 3.0
-  publish_frequency: 1.5
+  publish_frequency: 1.0
 
   # ローカルコストマップの計算範囲
   rolling_window: true

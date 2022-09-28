@@ -16,7 +16,7 @@ global_costmap:
 
   # 更新頻度
 #  update_frequency: 2.0
-  update_frequency: 1.0
+  update_frequency: 4.0
 #  publish_frequency: 2.0
   publish_frequency: 1.0
 

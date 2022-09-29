@@ -62,10 +62,9 @@ rviz上でTelecoの初期位置と目標位置をそれぞれマウス操作で�
 <br>
 
 > ### ナビゲーション実行時の目的地座標を調べる
-<br>
 
 `rostopic echo /move_base_simple/goal`
-<br>
+<br><br>
 Topicの中身は以下の通りで、目的地を与えるたびに更新される
 - シーケンス番号
 - タイムスタンプ

@@ -64,8 +64,8 @@ rviz上でTelecoの初期位置と目標位置をそれぞれマウス操作で�
 > ### ナビゲーション実行時の目的地座標を調べる
 <br>
 
-`rosmsg show geometry_msgs/PoseStamped`
-
+`rostopic echo /move_base_simple/goal`
+<br>
 Topicの中身は以下の通りで、目的地を与えるたびに更新される
 - シーケンス番号
 - タイムスタンプ

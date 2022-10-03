@@ -52,11 +52,11 @@
     <group if="$(eval rover_type=='mega3')">
     <!-- メガローバーVer.3.0の場合 -->
       <!-- argsの項でLRFの位置を調整できます。 args="x y z y p r" 20220518追記 -->
-      <node pkg="tf" type="static_transform_publisher" name="stp_laser" args="0.208 0 0.090 -1.57 0 0 base_link lrf_link 1" />
+      <node pkg="tf" type="static_transform_publisher" name="stp_laser" args="0.208 0 0.090 -4.71 0 0 base_link lrf_link 1" />
     </group>
     <group if="$(eval rover_type=='outdoor')">
       <!-- メガローバーVer.3.0屋外対応版の場合 -->
-      <node pkg="tf" type="static_transform_publisher" name="stp_laser" args="0.208 0 0.090 -1.57 0 0 base_link lrf_link 1" />
+      <node pkg="tf" type="static_transform_publisher" name="stp_laser" args="0.208 0 0.090 1.57 0 0 base_link lrf_link 1" />
     </group>
 
     <!-- RPLiDARデバイスドライバノード-->
@@ -73,8 +73,8 @@
 
 
   <!-- mapサーバー -->
-  <arg name="map_file" default="/home/teleco04/map/gmap_1f.yaml"/>
-  <!-- <arg name="map_file" default="$(find teleco-v_ros)/map/gmap.yaml"/> --> <!--マップファイルのパスの指定 -->
+  <!-- <arg name="map_file" default="/home/teleco04/map/gmap_1f.yaml"/> -->
+  <arg name="map_file" default="$(find teleco-v_ros)/map/open_house.yaml"/> <!--マップファイルのパスの指定 -->
   <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
  
   <!-- 

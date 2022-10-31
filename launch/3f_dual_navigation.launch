@@ -66,7 +66,8 @@ created by ©︎niscode
 
   <!-- mapサーバー -->
   <!--以下でマップファイルのパスの指定 -->
-  <arg name="map_file" default="$(find teleco-v_ros)/map/gmap_hanazono.yaml"/>
+  <!-- <arg name="map_file" default="$(find teleco-v_ros)/map/gmap_hanazono.yaml"/> -->
+  <arg name="map_file" default="$(find teleco-v_ros)/map/dualgmap_3f.yaml"/>
   <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
 
   <!-- laserscan multi_merger -->
@@ -131,6 +132,6 @@ created by ©︎niscode
 
   <!-- CA基盤からのコマンドをROSコマンドに変換する中継サーバの起動 -->
   <!-- <node pkg="パッケージ名" name="ノード名" type="プログラム名" /> -->
-  <node pkg="capf" name="capfBridge" type="capfBridge_hanazono.py" args="-d '$(find capf)/src/capfBridge_hanazono.py'"/>
+  <!-- <node pkg="capf" name="capfBridge" type="capfBridge_3f.py" args="-d '$(find capf)/src/capfBridge_3f.py'"/> -->
 
 </launch>
